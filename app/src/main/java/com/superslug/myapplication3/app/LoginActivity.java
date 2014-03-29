@@ -20,6 +20,9 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -54,10 +57,30 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
     private View mProgressView;
     private View mLoginFormView;
 
+    private TextView tv;
+    private TextView tv2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        tv = (TextView)findViewById(R.id.textView);
+        tv2 = (TextView)findViewById(R.id.textView2);
+
+        final Animation in = new AlphaAnimation(0.0f, 1.0f);
+        in.setDuration(3000);
+        AnimationSet as = new AnimationSet(true);
+        as.addAnimation(in);
+        in.setStartOffset(500);
+
+        final Animation in2 = new AlphaAnimation(0.0f, 1.0f);
+        in2.setDuration(1500);
+        AnimationSet as2 = new AnimationSet(true);
+        as2.addAnimation(in2);
+        in2.setStartOffset(3000);
+
+        tv.startAnimation(as);
+        tv2.startAnimation(as2);
 
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -219,6 +242,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
         List<String> emails = new ArrayList<String>();
+
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             emails.add(cursor.getString(ProfileQuery.ADDRESS));
