@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="#1199cc00"
+    android:background="@drawable/main_header_selector"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -88,6 +88,21 @@
                     android:textColor="#ffffff"
                     android:background="#99cc00"
                     android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="© SuperSlugs"
+                    android:id="@+id/companyTV"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100dp"
+                    android:textColor="#5599cc00"
+                    android:textStyle="bold"
+                    android:shadowColor="#33000000"
+                    android:shadowDx="0"
+                    android:shadowDy="-1"
+                    android:shadowRadius="0.1"/>
 
             </LinearLayout>
     </ScrollView>

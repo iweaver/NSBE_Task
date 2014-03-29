@@ -18,6 +18,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.text.method.PasswordTransformationMethod;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -60,9 +61,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
 
     private TextView tv;
     private TextView tv2;
+    private TextView tv3;
 
     // Set fonts for UI references
     public static Typeface tf;
+    public static Typeface tf2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,9 +74,17 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
 
         tv = (TextView)findViewById(R.id.textView);
         tv2 = (TextView)findViewById(R.id.textView2);
+        tv3 = (TextView)findViewById(R.id.companyTV);
         tf = Typeface.createFromAsset(getAssets(), "fonts/Georgia-Bold.TTF");
+        tf2 = Typeface.createFromAsset(getAssets(), "fonts/Georgia.TTF");
 
         tv.setTypeface(tf);
+        tv3.setTypeface(tf2);
+
+        EditText password = (EditText) findViewById(R.id.password);
+        password.setTypeface(Typeface.DEFAULT);
+        password.setTransformationMethod(new PasswordTransformationMethod());
+
         //derp
         final Animation in = new AlphaAnimation(0.0f, 1.0f);
         in.setDuration(3000);
