@@ -9,7 +9,7 @@
     tools:context="com.superslug.myapplication3.app.MainActivity">
 
     <TextView
-        android:text="Ian did this!"
+        android:text="NSBE TO_DO\n*************\n\nGet shit done             [x]\nGet more shit done   [ ] "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
