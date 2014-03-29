@@ -186,7 +186,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
         return password.length() > 4;
     }
 
-    /**
+    /**kk
      * Shows the progress UI and hides the login form.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
