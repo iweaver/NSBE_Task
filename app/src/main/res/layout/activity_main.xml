@@ -9,7 +9,7 @@
     tools:context="com.superslug.myapplication3.app.MainActivity">
 
     <TextView
-        android:text="@string/hello_world"
+        android:text="Ian did this!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
