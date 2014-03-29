@@ -30,7 +30,9 @@
         android:shadowColor="#55000000"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal"
-        android:textSize="150dp" />
+        android:textSize="150dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_marginTop="20dp" />
 
     <ScrollView
         android:id="@+id/login_form"
@@ -55,7 +57,8 @@
                     android:id="@+id/textView2"
                     android:layout_gravity="center_horizontal"
                     android:textStyle="bold"
-                    android:textSize="30dp" />
+                    android:textSize="40dp"
+                    android:layout_marginBottom="50dp" />
 
                 <AutoCompleteTextView
                     android:id="@+id/email"

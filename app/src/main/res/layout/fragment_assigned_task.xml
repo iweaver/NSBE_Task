@@ -1,13 +1,152 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.superslug.myapplication3.app.AssignedTaskFragment">
+    tools:context="com.superslug.myapplication3.app.AssignedTaskFragment"
+    android:background="#eeeecc">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/memberTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="SuperSlugs"
+                android:id="@+id/orgTV"
+                android:layout_marginLeft="20dp"
+                android:textSize="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Emmanuel Kayede"
+                    android:id="@+id/name1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="24dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order bacon"
+                    android:id="@+id/checkBox5"
+                    android:layout_marginLeft="20dp"
+                    android:checked="true"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="#555555" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Steal wins"
+                    android:id="@+id/checkBox6"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#555555"
+                    android:checked="true"
+                    android:layout_marginBottom="20dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check CSIF account balance"
+                    android:id="@+id/checkBox7"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#555555"
+                    android:checked="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_below="@+id/name2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Steven Anyanwu"
+                    android:id="@+id/name2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="24dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register for Nationals 2015"
+                    android:id="@+id/checkBox1"
+                    android:layout_marginLeft="20dp"
+                    android:checked="true"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="#555555" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply for CFC Grant"
+                    android:id="@+id/checkBox2"
+                    android:layout_marginLeft="20dp"
+                    android:checked="true"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="#555555" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create winter qtr budget"
+                    android:id="@+id/checkBox3"
+                    android:layout_marginLeft="20dp"
+                    android:checked="true"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="#555555" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy pizza for next meeting"
+                    android:id="@+id/checkBox4"
+                    android:layout_marginLeft="20dp"
+                    android:checked="true"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="#555555" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

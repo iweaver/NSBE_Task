@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.superslug.myapplication3.app.MemberFragment"
-    android:background="#dddddd">
+    android:background="#eecccc">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -305,7 +305,7 @@
         android:text="SuperSlugs"
         android:id="@+id/memberTV"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"

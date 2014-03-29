@@ -85,10 +85,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
         password.setTypeface(Typeface.DEFAULT);
         password.setTransformationMethod(new PasswordTransformationMethod());
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-
         //derp
         final Animation in = new AlphaAnimation(0.0f, 1.0f);
         in.setDuration(3000);
@@ -193,7 +189,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
             // perform the user login attempt.
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
-
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
 
         }
     }

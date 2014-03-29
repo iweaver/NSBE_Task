@@ -1,6 +1,7 @@
 package com.superslug.myapplication3.app;
 
 import android.app.Activity;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -17,6 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 
@@ -37,7 +40,7 @@ public class MainActivity extends ActionBarActivity
     public static Typeface rbli;
     public static Typeface rblr;
     public static Typeface rbsb;
-
+    public static Typeface rbsr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,16 +148,81 @@ public class MainActivity extends ActionBarActivity
                 rbli = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHTITALIC.TTF");
                 rblr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHT.TTF");
                 rbsb = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-BOLD.TTF");
+                rbsr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-REGULAR.TTF");
 
                 TextView tv = (TextView)rootView.findViewById(R.id.memberTV);
+
+                TextView n1 = (TextView)rootView.findViewById(R.id.name1);
+                TextView n2 = (TextView)rootView.findViewById(R.id.name2);
+                TextView n3 = (TextView)rootView.findViewById(R.id.name3);
+                TextView n4 = (TextView)rootView.findViewById(R.id.name4);
+                TextView n5 = (TextView)rootView.findViewById(R.id.name5);
+                TextView n6 = (TextView)rootView.findViewById(R.id.name6);
+
                 tv.setTypeface(rblr);
+                n1.setTypeface(rbsr);
+                n2.setTypeface(rbsr);
+                n3.setTypeface(rbsr);
+                n4.setTypeface(rbsr);
+                n5.setTypeface(rbsr);
+                n6.setTypeface(rbsr);
             }
             else if(getArguments().getInt(ARG_SECTION_NUMBER) == 2)
             {
                 rootView = inflater.inflate(R.layout.fragment_my_task, container, false);
+                rbli = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHTITALIC.TTF");
+                rblr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHT.TTF");
+                rbsb = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-BOLD.TTF");
+                rbsr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-REGULAR.TTF");
+
+                TextView tv = (TextView)rootView.findViewById(R.id.orgTV);
+
+                final CheckBox cb1 = (CheckBox)rootView.findViewById(R.id.checkBox1);
+                CheckBox cb2 = (CheckBox)rootView.findViewById(R.id.checkBox2);
+                CheckBox cb3 = (CheckBox)rootView.findViewById(R.id.checkBox3);
+                CheckBox cb4 = (CheckBox)rootView.findViewById(R.id.checkBox4);
+                CheckBox cb5 = (CheckBox)rootView.findViewById(R.id.checkBox5);
+                CheckBox cb6 = (CheckBox)rootView.findViewById(R.id.checkBox6);
+                CheckBox cb7 = (CheckBox)rootView.findViewById(R.id.checkBox7);
+                tv.setTypeface(rblr);
+                cb1.setTypeface(rbsr);
+                /*cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+                        cb1.setPaintFlags(cb1.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    }
+                });*/
+
+                cb2.setTypeface(rbsr);
+                cb3.setTypeface(rbsr);
+                cb4.setTypeface(rbsr);
+                cb5.setTypeface(rbsr);
+                cb6.setTypeface(rbsr);
+                cb7.setTypeface(rbsr);
             }
             else {
                 rootView = inflater.inflate(R.layout.fragment_assigned_task, container, false);
+                rbli = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHTITALIC.TTF");
+                rblr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHT.TTF");
+                rbsb = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-BOLD.TTF");
+                rbsr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-REGULAR.TTF");
+
+                TextView otv = (TextView)rootView.findViewById(R.id.orgTV);
+                CheckBox cb1 = (CheckBox)rootView.findViewById(R.id.checkBox1);
+                CheckBox cb2 = (CheckBox)rootView.findViewById(R.id.checkBox2);
+                CheckBox cb3 = (CheckBox)rootView.findViewById(R.id.checkBox3);
+                CheckBox cb4 = (CheckBox)rootView.findViewById(R.id.checkBox4);
+                CheckBox cb5 = (CheckBox)rootView.findViewById(R.id.checkBox5);
+                CheckBox cb6 = (CheckBox)rootView.findViewById(R.id.checkBox6);
+                CheckBox cb7 = (CheckBox)rootView.findViewById(R.id.checkBox7);
+                otv.setTypeface(rblr);
+                cb1.setTypeface(rbsr);
+                cb2.setTypeface(rbsr);
+                cb3.setTypeface(rbsr);
+                cb4.setTypeface(rbsr);
+                cb5.setTypeface(rbsr);
+                cb6.setTypeface(rbsr);
+                cb7.setTypeface(rbsr);
             }
             return rootView;
         }
