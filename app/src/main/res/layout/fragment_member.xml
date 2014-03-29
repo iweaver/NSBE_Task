@@ -1,0 +1,314 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.superslug.myapplication3.app.MemberFragment"
+    android:background="#dddddd">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/memberTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="96dp"
+                android:background="@drawable/card">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:minHeight="90dp"
+                    android:minWidth="90dp"
+                    android:maxHeight="96dp"
+                    android:maxWidth="96dp"
+                    android:src="@drawable/mem2"
+                    android:layout_margin="3dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Steven Anyanwu"
+                        android:id="@+id/name1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Programmer/Designer"
+                        android:id="@+id/title1"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="96dp"
+                android:background="@drawable/card"
+                android:id="@+id/linearLayout" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:minHeight="90dp"
+                    android:minWidth="90dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="90dp"
+                    android:src="@drawable/mem3"
+                    android:layout_margin="3dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout6">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Emmanuel Kayede"
+                        android:id="@+id/name2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Freshman"
+                        android:id="@+id/title2"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="96dp"
+                android:background="@drawable/card"
+                android:id="@+id/linearLayout2" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:minHeight="90dp"
+                    android:minWidth="90dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="90dp"
+                    android:src="@drawable/mem1"
+                    android:layout_margin="3dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout7">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Ian Weaver"
+                        android:id="@+id/name3"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Backend Programmer"
+                        android:id="@+id/title3"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="96dp"
+                android:background="@drawable/card"
+                android:id="@+id/linearLayout3" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView4"
+                    android:minHeight="90dp"
+                    android:minWidth="90dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="90dp"
+                    android:src="@drawable/mem4"
+                    android:layout_margin="3dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Desmond Vehar"
+                        android:id="@+id/name4"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Small Text"
+                        android:id="@+id/title4"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="96dp"
+                android:background="@drawable/card"
+                android:id="@+id/linearLayout4" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView5"
+                    android:minHeight="90dp"
+                    android:minWidth="90dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="90dp"
+                    android:src="@drawable/mem2"
+                    android:layout_margin="3dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout9">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Clone #1"
+                        android:id="@+id/name5"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="T-1000"
+                        android:id="@+id/title5"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="96dp"
+                android:background="@drawable/card"
+                android:id="@+id/linearLayout5" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView6"
+                    android:minHeight="90dp"
+                    android:minWidth="90dp"
+                    android:maxHeight="90dp"
+                    android:maxWidth="90dp"
+                    android:src="@drawable/mem3"
+                    android:layout_margin="3dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Clone #2"
+                        android:id="@+id/name6"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="T-1000"
+                        android:id="@+id/title6"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#444444" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SuperSlugs"
+        android:id="@+id/memberTV"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="24dp" />
+
+</RelativeLayout>
