@@ -1,12 +1,14 @@
 package com.superslug.myapplication3.app;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
     String name;
-    List<Task> tasks; // orgs the person belongs to
+    List<Task> tasks; // tasks they are working on
 
     public Person (String name) {
+        this.tasks = new ArrayList<Task>();
         this.name = name;
     }
 
