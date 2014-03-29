@@ -7,17 +7,17 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
+        android:id="@+id/orglist"
         android:layout_gravity="center_horizontal"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="0dp"
-        android:layout_above="@+id/button" />
+        android:layout_above="@+id/add_org_button" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/join_org"
-        android:id="@+id/button"
+        android:id="@+id/add_org_button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
