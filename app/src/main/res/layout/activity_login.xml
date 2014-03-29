@@ -12,53 +12,52 @@
     tools:context="com.superslug.myapplication3.app.LoginActivity">
 
     <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="U"
-        android:textColor="#99000000"
-        android:shadowRadius="5"
-        android:shadowColor="#55000000"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        android:textSize="150dp"
-        android:layout_marginBottom="-40dp"
-        android:layout_marginTop="20dp" />
-
     <ScrollView
-        android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_form" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="U"
+                android:textColor="#99000000"
+                android:shadowRadius="5"
+                android:shadowColor="#55000000"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:textSize="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#99000000"
+                android:shadowRadius="5"
+                android:shadowColor="#55000000"
+                android:text="DO"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:layout_below="@id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-20dp" />
 
             <LinearLayout
                 android:id="@+id/email_login_form"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#99000000"
-                    android:shadowRadius="5"
-                    android:shadowColor="#55000000"
-                    android:text="DO"
-                    android:id="@+id/textView2"
-                    android:layout_gravity="center_horizontal"
-                    android:textStyle="bold"
-                    android:textSize="40dp"
-                    android:layout_marginBottom="50dp" />
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_below="@id/textView2">
 
                 <AutoCompleteTextView
                     android:id="@+id/email"
@@ -108,7 +107,17 @@
                     android:shadowRadius="0.1"/>
 
             </LinearLayout>
+
+        </RelativeLayout>
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
 
 </LinearLayout>
 

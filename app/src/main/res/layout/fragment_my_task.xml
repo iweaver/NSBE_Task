@@ -12,108 +12,112 @@
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
         android:layout_below="@+id/memberTV"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" >
+        android:layout_alignParentLeft="true">
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/orgTV"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:id="@+id/linear">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="SuperSlugs"
+                android:id="@+id/orgTV"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="24dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feed the members [by Steven Anyanwu]"
+                android:id="@+id/checkBox1"
+                android:layout_marginLeft="20dp"
+                android:checked="true"
+                android:layout_marginBottom="20dp"
+                android:textColor="#555555" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Increase the number of culturally responsible Black engineers"
+                android:id="@+id/checkBox2"
+                android:layout_marginLeft="20dp"
+                android:checked="true"
+                android:layout_marginBottom="20dp"
+                android:textColor="#555555" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Excel Academically"
+                android:id="@+id/checkBox3"
+                android:layout_marginLeft="20dp"
+                android:checked="true"
+                android:layout_marginBottom="20dp"
+                android:textColor="#555555" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Succeed Professionally"
+                android:id="@+id/checkBox4"
+                android:layout_marginLeft="20dp"
+                android:checked="true"
+                android:layout_marginBottom="20dp"
+                android:textColor="#555555" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Positively impact the community"
+                android:id="@+id/checkBox5"
+                android:layout_marginLeft="20dp"
+                android:checked="true"
+                android:layout_marginBottom="20dp"
+                android:textColor="#555555" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Win Hackathon [by Desmond Vahar]"
+                android:id="@+id/checkBox6"
+                android:layout_marginLeft="20dp"
+                android:textColor="#555555"
+                android:checked="true"
+                android:layout_marginBottom="20dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sleep"
+                android:id="@+id/checkBox7"
+                android:layout_marginLeft="20dp"
+                android:textColor="#555555"
+                android:checked="false"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
     </ScrollView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="SuperSlugs"
-        android:id="@+id/orgTV"
+        android:text=". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+        android:id="@+id/textView"
+        android:textColor="#55000000"
+        android:layout_below="@+id/scrollView"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="24dp" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/orgTV"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Feed the members [by Steven Anyanwu]"
-            android:id="@+id/checkBox1"
-            android:layout_marginLeft="20dp"
-            android:checked="true"
-            android:layout_marginBottom="20dp"
-            android:textColor="#555555" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Increase the number of culturally responsible Black engineers"
-            android:id="@+id/checkBox2"
-            android:layout_marginLeft="20dp"
-            android:checked="true"
-            android:layout_marginBottom="20dp"
-            android:textColor="#555555" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Excel Academically"
-            android:id="@+id/checkBox3"
-            android:layout_marginLeft="20dp"
-            android:checked="true"
-            android:layout_marginBottom="20dp"
-            android:textColor="#555555" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Succeed Professionally"
-            android:id="@+id/checkBox4"
-            android:layout_marginLeft="20dp"
-            android:checked="true"
-            android:layout_marginBottom="20dp"
-            android:textColor="#555555" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Positively impact the community"
-            android:id="@+id/checkBox5"
-            android:layout_marginLeft="20dp"
-            android:checked="true"
-            android:layout_marginBottom="20dp"
-            android:textColor="#555555" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Win Hackathon [by Desmond Vahar]"
-            android:id="@+id/checkBox6"
-            android:layout_marginLeft="20dp"
-            android:textColor="#555555"
-            android:checked="true"
-            android:layout_marginBottom="20dp" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sleep"
-            android:id="@+id/checkBox7"
-            android:layout_marginLeft="20dp"
-            android:textColor="#555555"
-            android:checked="false" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text=". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
-            android:id="@+id/textView"
-            android:textColor="#55000000" />
-    </LinearLayout>
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

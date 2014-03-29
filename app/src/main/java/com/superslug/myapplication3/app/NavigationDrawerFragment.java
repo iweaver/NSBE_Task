@@ -2,13 +2,16 @@ package com.superslug.myapplication3.app;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+import android.graphics.Typeface;
+import android.support.v4.app.DialogFragment;
 import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.content.SharedPreferences;
@@ -23,6 +26,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,6 +39,7 @@ import android.widget.Toast;
  */
 public class NavigationDrawerFragment extends Fragment {
 
+    public static String value = "";
     /**
      * Remember the position of the selected item.
      */
@@ -61,6 +68,7 @@ public class NavigationDrawerFragment extends Fragment {
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
+
 
     public NavigationDrawerFragment() {
     }
@@ -253,10 +261,53 @@ public class NavigationDrawerFragment extends Fragment {
 
         if (item.getItemId() == R.id.action_example) {
             //Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
+            LayoutInflater linf = LayoutInflater.from(getActivity());
+            final View inflator = linf.inflate(R.layout.dialog, null);
+            AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+
+            alert.setTitle("Insert New Task");
+            alert.setMessage("Task");
+            alert.setView(inflator);
+
+            final EditText et1 = (EditText) inflator.findViewById(R.id.editText);
+
+            alert.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton)
+                {
+                    value = et1.getText().toString();
+                    insertCheck();
+                    //do operations using s1 and s2 here...
+                }
+            });
+
+            alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    dialog.cancel();
+                }
+            });
+
+            alert.show();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void insertCheck()
+    {
+        Typeface rbsr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-REGULAR.TTF");
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        int derp = (int)getActivity().getResources().getDisplayMetrics().density;
+        params.setMargins((int)(20*derp), 0, 0, (int)(20*derp));
+        CheckBox temp = new CheckBox(getActivity());
+        temp.setLayoutParams(params);
+        temp.setText(NavigationDrawerFragment.value);
+        temp.setTypeface(rbsr);
+        MainActivity.ll.addView(temp);
     }
 
     /**

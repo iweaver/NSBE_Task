@@ -20,6 +20,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -41,6 +42,7 @@ public class MainActivity extends ActionBarActivity
     public static Typeface rblr;
     public static Typeface rbsb;
     public static Typeface rbsr;
+    public static LinearLayout ll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,7 +151,7 @@ public class MainActivity extends ActionBarActivity
                 rblr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHT.TTF");
                 rbsb = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-BOLD.TTF");
                 rbsr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-REGULAR.TTF");
-
+                ll = (LinearLayout)rootView.findViewById(R.id.linear);
                 TextView tv = (TextView)rootView.findViewById(R.id.memberTV);
 
                 TextView n1 = (TextView)rootView.findViewById(R.id.name1);
@@ -174,7 +176,7 @@ public class MainActivity extends ActionBarActivity
                 rblr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHT.TTF");
                 rbsb = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-BOLD.TTF");
                 rbsr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-REGULAR.TTF");
-
+                ll = (LinearLayout)rootView.findViewById(R.id.linear);
                 TextView tv = (TextView)rootView.findViewById(R.id.orgTV);
 
                 final CheckBox cb1 = (CheckBox)rootView.findViewById(R.id.checkBox1);
@@ -206,7 +208,7 @@ public class MainActivity extends ActionBarActivity
                 rblr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTO-LIGHT.TTF");
                 rbsb = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-BOLD.TTF");
                 rbsr = Typeface.createFromAsset(getActivity().getAssets(), "fonts/ROBOTOSLAB-REGULAR.TTF");
-
+                ll = (LinearLayout)rootView.findViewById(R.id.linear);
                 TextView otv = (TextView)rootView.findViewById(R.id.orgTV);
                 CheckBox cb1 = (CheckBox)rootView.findViewById(R.id.checkBox1);
                 CheckBox cb2 = (CheckBox)rootView.findViewById(R.id.checkBox2);
