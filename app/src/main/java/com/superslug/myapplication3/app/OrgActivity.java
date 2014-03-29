@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -32,9 +33,11 @@ public class OrgActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(getApplicationContext(),
-                        "Org Name = " + listItems.get(position), Toast.LENGTH_SHORT)
-                        .show();
+                //Toast.makeText(getApplicationContext(),
+                       // "Org Name = " + listItems.get(position), Toast.LENGTH_SHORT)
+                      //  .show();
+                Intent intent = new Intent(ctx, MainActivity.class);
+                startActivity(intent);
             }
         });
 
