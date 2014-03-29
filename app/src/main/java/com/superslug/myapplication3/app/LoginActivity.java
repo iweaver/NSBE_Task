@@ -66,7 +66,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
 
         tv = (TextView)findViewById(R.id.textView);
         tv2 = (TextView)findViewById(R.id.textView2);
-
+        //derp
         final Animation in = new AlphaAnimation(0.0f, 1.0f);
         in.setDuration(3000);
         AnimationSet as = new AnimationSet(true);
