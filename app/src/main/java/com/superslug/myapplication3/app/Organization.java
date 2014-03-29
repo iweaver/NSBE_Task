@@ -1,5 +1,7 @@
 package com.superslug.myapplication3.app;
 
+import java.util.List;
+
 public class Organization {
     String name;
     List<Person> people;

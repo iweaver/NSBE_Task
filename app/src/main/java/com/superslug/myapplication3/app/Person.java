@@ -1,5 +1,7 @@
 package com.superslug.myapplication3.app;
 
+import java.util.List;
+
 public class Person {
     String name;
     List<Task> tasks; // orgs the person belongs to
