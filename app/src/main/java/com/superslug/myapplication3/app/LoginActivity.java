@@ -10,6 +10,7 @@ import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build.VERSION;
@@ -59,6 +60,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
 
     private TextView tv;
     private TextView tv2;
+
+    // Set fonts for UI references
+    public static Typeface tf;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +71,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
 
         tv = (TextView)findViewById(R.id.textView);
         tv2 = (TextView)findViewById(R.id.textView2);
+        tf = Typeface.createFromAsset(getAssets(), "fonts/Georgia-Bold.TTF");
+
+        tv.setTypeface(tf);
         //derp
         final Animation in = new AlphaAnimation(0.0f, 1.0f);
         in.setDuration(3000);
@@ -171,7 +179,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor>{
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
 
-            Intent intent = new Intent(this, OrgActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
         }
