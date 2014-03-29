@@ -13,5 +13,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="title_activity_main_activity2">MainActivity2</string>
+    <string name="title_activity_org">OrgActivity</string>
+    <string name="new_org_name_hint">New Org Name</string>
+    <string name="create_str">create</string>
+    <string name="cancel_str">cancel</string>
+    <string name="title_activity_task">TaskActivity</string>
 </resources>
